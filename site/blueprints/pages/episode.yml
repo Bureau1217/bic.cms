@@ -1,0 +1,40 @@
+title: Épisode
+
+icon: 🎙
+
+status:
+  draft:
+    label: Brouillon
+    text: L'épisode est en mode brouillon.
+  unlisted:
+    label: Non listé
+    text: L'épisode est en ligne mais n'apparaît pas dans les menus.
+  listed:
+    label: Publié
+    text: L'épisode est publié.
+
+columns:
+  - width: 1/2
+    sections:
+      imagepodcast:
+        type: files
+        label: Image podcast
+        template: poster
+        accept:
+          - image/*
+        max: 1
+
+  - width: 1/2
+    sections:
+      contenu:
+        type: fields
+        fields:
+          texte:
+            label: Texte
+            type: writer
+      audio:
+        type: files
+        label: Audio
+        template: audio
+        accept:
+          - audio/*

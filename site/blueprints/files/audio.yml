@@ -1,0 +1,12 @@
+title: Audio
+
+accept:
+  extension: mp3, wav, ogg, m4a
+
+fields:
+  title:
+    type: text
+    label: Titre
+  description:
+    type: textarea
+    label: Description

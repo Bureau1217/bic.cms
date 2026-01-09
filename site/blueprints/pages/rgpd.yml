@@ -1,0 +1,47 @@
+title: RGPD
+
+icon: 📋
+
+status:
+  draft: true
+  listed: true
+
+options:
+  changeSlug: true
+  delete: false
+
+tabs:
+  mentions:
+    icon: text
+    label: Mentions légales
+    fields:
+      mentionslegales:
+        label: Contenu
+        type: layout
+        layouts:
+          - "1/1"
+          - "1/2, 1/2"
+
+  protection:
+    icon: lock
+    label: Protection des données
+    fields:
+      protectiondonnees:
+        label: Contenu
+        type: layout
+        layouts:
+          - "1/1"
+          - "1/2, 1/2"
+
+  engagement:
+    icon: heart
+    label: Engagement
+    fields:
+      engagement:
+        label: Contenu
+        type: layout
+        layouts:
+          - "1/1"
+          - "1/2, 1/2"
+
+  seo: seo/page

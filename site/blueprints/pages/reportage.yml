@@ -1,0 +1,9 @@
+title: Reportage
+
+icon: 🎙
+
+sections:
+  info:
+    type: info
+    label: Info
+    text: Les épisodes sont gérés depuis la page Parcours.

@@ -1,0 +1,31 @@
+columns:
+  - width: 1/2
+    sections:
+      home:
+        type: pages
+        label: Accueil
+        layout: cards
+        size: huge
+        templates:
+          - home
+        image:
+          ratio: 16/9
+          cover: true
+
+  - width: 1/2
+    sections:
+      pages:
+        type: pages
+        label: Pages
+        create: default
+        templates:
+          - apropos
+          - default
+          - parcours
+          - rgpd
+          - references
+
+  - width: 1/1
+    sections:
+      lieux:
+        extends: sections/lieux

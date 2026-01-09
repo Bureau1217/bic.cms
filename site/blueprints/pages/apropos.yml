@@ -1,0 +1,50 @@
+title: A propos
+
+icon: ☎️
+
+status:
+  draft: true
+  listed: true
+
+options:
+  changeSlug: true
+  delete: false
+
+tabs:
+  content:
+    icon: text
+    label: Content
+    fields:
+      layout:
+        label: Layout
+        type: layout
+        layouts:
+          - "1/1"
+          - "1/2, 1/2"
+          - "1/3, 1/3, 1/3"
+
+  contact:
+    icon: map
+    label: Contact
+    fields:
+      address:
+        label: Adresse
+        type: writer
+        inline: true
+      email:
+        label: Email
+        type: email
+      phone:
+        label: Téléphone
+        type: tel
+      partenaires:
+        label: Logos partenaires
+        type: files
+        layout: cards
+        accept:
+          - image/*
+        image:
+          ratio: 1/1
+          cover: false
+
+  seo: seo/page

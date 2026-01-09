@@ -1,0 +1,11 @@
+type: pages
+label: Épisodes
+parent: kirby.page("parcours")
+size: small
+layout: cards
+template: episode
+empty: Aucun épisode pour le moment
+image:
+  query: page.images.template('poster').first
+  cover: true
+  ratio: 5/4

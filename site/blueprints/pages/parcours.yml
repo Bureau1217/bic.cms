@@ -1,0 +1,21 @@
+title: Parcours
+
+icon: 📍
+
+sections:
+  lieux:
+    type: pages
+    template: lieu
+    empty: Aucun lieu pour le moment
+    status: listed
+    sortable: true
+    layout: cards
+    size: small
+    image:
+      query: page.picto.toFile
+      cover: false
+      ratio: 1/1
+      back: "#FE0002"
+  episodes:
+    extends: sections/episodes
+    label: Épisodes

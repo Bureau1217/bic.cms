@@ -1,0 +1,72 @@
+title: Lieu
+
+icon: 📍
+
+num: sort
+
+status:
+  draft:
+    label: Brouillon
+    text: Le lieu est en mode brouillon. Il n'est visible que par les editeurs avec acces au panel.
+  unlisted:
+    label: En revision
+    text: Le lieu est en ligne et peut etre visite avec l'URL directe. L'equipe doit encore donner le feu vert pour le publier.
+  listed:
+    label: Publie
+    text: Le lieu est en ligne et liste dans la section Lieux
+
+columns:
+  - width: 2/3
+    fields:
+      layout:
+        label: Texte
+        type: layout
+        layouts:
+          - "1/1"
+          - "1/2, 1/2"
+          - "1/3, 1/3, 1/3"
+
+  - width: 1/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          picto:
+            label: Numéro du lieu - picto
+            type: files
+            max: 1
+            uploads:
+              template: picto
+            accept:
+              - image/svg+xml
+              - image/png
+          cover: fields/cover
+      files:
+        type: files
+        template: blocks/image
+      imagepodcast:
+        type: files
+        label: Image podcast
+        template: poster
+        accept:
+          - image/*
+        max: 1
+      audio:
+        type: files
+        label: Audio
+        template: audio
+        accept:
+          - audio/*
+      separator:
+        type: info
+        label: " "
+        text: "─────────────────────────"
+        theme: none
+      portrait:
+        type: fields
+        fields:
+          portraitlayout:
+            label: Portrait
+            type: layout
+            layouts:
+              - "1/1"
