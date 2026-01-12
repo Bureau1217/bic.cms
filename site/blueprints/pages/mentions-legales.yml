@@ -1,0 +1,25 @@
+title: Mentions légales
+
+icon: 📄
+
+status:
+  draft: true
+  listed: true
+
+options:
+  changeSlug: true
+  delete: false
+
+tabs:
+  content:
+    icon: text
+    label: Contenu
+    fields:
+      layout:
+        label: Contenu
+        type: layout
+        layouts:
+          - "1/1"
+          - "1/2, 1/2"
+
+  seo: seo/page

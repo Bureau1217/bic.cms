@@ -5,7 +5,7 @@ size: small
 layout: cards
 template: lieu
 empty: Aucun lieu pour le moment
-status: listed
+status: all
 sortable: true
 image:
   query: page.picto.toFile
