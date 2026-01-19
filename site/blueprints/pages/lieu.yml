@@ -40,6 +40,10 @@ columns:
             accept:
               - image/svg+xml
               - image/png
+          gps:
+            label: Coordonnées GPS
+            type: text
+            placeholder: "46.5191, 6.5668"
           cover: fields/cover
       files:
         type: files
