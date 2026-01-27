@@ -45,16 +45,17 @@ columns:
             type: text
             placeholder: "46.5191, 6.5668"
           cover: fields/cover
+          imagepodcast:
+            label: Image podcast
+            type: files
+            max: 1
+            uploads:
+              template: poster
+            accept:
+              - image/*
       files:
         type: files
         template: blocks/image
-      imagepodcast:
-        type: files
-        label: Image podcast
-        template: poster
-        accept:
-          - image/*
-        max: 1
       audio:
         type: files
         label: Audio
