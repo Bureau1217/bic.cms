@@ -52,26 +52,23 @@ columns:
             uploads:
               template: poster
             accept:
-              - image/*
-      files:
-        type: files
-        template: blocks/image
-      audio:
-        type: files
-        label: Audio
-        template: audio
-        accept:
-          - audio/*
-      separator:
-        type: info
-        label: " "
-        text: "─────────────────────────"
-        theme: none
-      portrait:
-        type: fields
-        fields:
-          portraitlayout:
-            label: Portrait
-            type: layout
-            layouts:
-              - "1/1"
+              - image/
+          audio:
+            type: files
+            label: Audio
+            template: audio
+            accept:
+              - audio/*
+        separator:
+          type: info
+          label: " "
+          text: "─────────────────────────"
+          theme: none
+        portrait:
+          type: fields
+          fields:
+            portraitlayout:
+              label: Portrait
+              type: layout
+              layouts:
+                - "1/1"

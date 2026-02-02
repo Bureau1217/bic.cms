@@ -12,16 +12,46 @@ options:
 
 tabs:
   content:
-    icon: text
-    label: Content
+    type: fields
     fields:
-      layout:
-        label: Layout
-        type: layout
-        layouts:
-          - "1/1"
-          - "1/2, 1/2"
-          - "1/3, 1/3, 1/3"
+      titre:
+        label: Titre
+        type: blocks
+        width: 1/3
+        fieldsets:
+          - heading
+      soustitre:
+        label: Sous-titre
+        type: blocks
+        width: 1/3
+        fieldsets:
+          - text
+      partenaires:
+        label: Partenaires
+        type: structure
+        columns:
+          nom: true
+          image: true
+          paragraphe: true
+          lien: true
+        fields:
+          image:
+            label: Image
+            type: files
+            max: 1
+            accept:
+              - image/*
+            width: 1/2
+          nom:
+            label: Nom
+            type: text
+            width: 1/2
+          paragraphe:
+            label: Paragraphe
+            type: textarea
+          lien:
+            label: Lien
+            type: url
 
   contact:
     icon: map
@@ -37,7 +67,7 @@ tabs:
       phone:
         label: Téléphone
         type: tel
-      partenaires:
+      logos:
         label: Logos partenaires
         type: files
         layout: cards
