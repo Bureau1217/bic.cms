@@ -8,9 +8,12 @@ return [
   ],
   'kql' => [
     'auth' => false,             // Allow KQL without login
-    'intercept' => function ($type, $key, $value) {
-      return true;  // Allow all queries in dev
-    }
+    // Autoriser les méthodes personnalisées des page models
+    'methods' => [
+      'Kirby\Cms\Page' => [
+        'layoutWithResolvedFiles'
+      ]
+    ]
   ],
   'plugins' => [
     'tobimori/seo' => false,

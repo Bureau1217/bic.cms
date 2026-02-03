@@ -31,7 +31,7 @@ columns:
         fields:
           texte:
             label: Texte
-            type: writer
+            type: text
       audio:
         type: files
         label: Audio

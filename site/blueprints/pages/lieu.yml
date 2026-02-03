@@ -19,12 +19,12 @@ columns:
   - width: 2/3
     fields:
       layout:
-        label: Texte
+        label: Colonne (alternance)
         type: layout
         layouts:
           - "1/1"
-          - "1/2, 1/2"
-          - "1/3, 1/3, 1/3"
+        # - "1/2, 1/2"
+        # - "1/3, 1/3, 1/3"
 
   - width: 1/3
     sections:
@@ -59,16 +59,32 @@ columns:
             template: audio
             accept:
               - audio/*
-        separator:
-          type: info
-          label: " "
-          text: "─────────────────────────"
-          theme: none
-        portrait:
-          type: fields
-          fields:
-            portraitlayout:
-              label: Portrait
-              type: layout
-              layouts:
-                - "1/1"
+          separator:
+            type: info
+            label: " "
+            text: "─────────────────────────"
+            theme: none
+          portraitlayout:
+            label: Portrait
+            type: structure
+            columns:
+              nom: true 
+            fields:
+              image:
+                label: Image
+                type: files
+                max: 1
+                accept:
+                  - image/*
+              nom:
+                label: Nom
+                type: text
+              description:
+                label: Description
+                type: textarea
+              link:
+                label: lien intern (BIC)
+                type: pages
+                pageTypes:
+                  - parcours
+                max: 1
