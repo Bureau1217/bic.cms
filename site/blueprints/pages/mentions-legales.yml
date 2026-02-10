@@ -14,12 +14,25 @@ tabs:
   content:
     icon: text
     label: Contenu
-    fields:
-      layout:
-        label: Contenu
-        type: layout
-        layouts:
-          - "1/1"
-          - "1/2, 1/2"
+    sections:
+      mentions-legales:
+        type: fields
+        fields:
+          items:
+            label: Mentions légales
+            type: structure
+            columns:
+              nom: true
+              description: true
+            fields:
+              nom:
+                label: Nom
+                type: text
+                width: 1/2
+              description:
+                label: Description
+                type: textarea
+                width: 1/2
+
 
   seo: seo/page

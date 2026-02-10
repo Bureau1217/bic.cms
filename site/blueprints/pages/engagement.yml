@@ -14,12 +14,24 @@ tabs:
   content:
     icon: heart
     label: Contenu
-    fields:
-      layout:
-        label: Contenu
-        type: layout
-        layouts:
-          - "1/1"
-          - "1/2, 1/2"
+    sections:
+      engagement:
+        type: fields
+        fields:
+          items:
+            label: Engagement
+            type: structure
+            columns:
+              nom: true
+              description: true
+            fields:
+              nom:
+                label: Nom
+                type: text
+                width: 1/2
+              description:
+                label: Description
+                type: textarea
+                width: 1/2
 
   seo: seo/page
