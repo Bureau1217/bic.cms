@@ -83,6 +83,13 @@ class LieuPage extends Page
                             ];
                             break;
 
+                        case 'quote':
+                            $blockData['content'] = [
+                                'text' => $block->text()->value(),
+                                'citation' => $block->citation()->value()
+                            ];
+                            break;
+
                         default:
                             // Pour les autres types de blocs, on garde le contenu brut
                             $blockData['content'] = $block->content()->toArray();

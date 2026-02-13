@@ -40,6 +40,10 @@ columns:
             accept:
               - image/svg+xml
               - image/png
+          adresse:
+            label: Adresse
+            type: text
+            placeholder: "123 Rue de la Paix, 1205 Genève"
           gps:
             label: Coordonnées GPS
             type: text
