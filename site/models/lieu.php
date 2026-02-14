@@ -3,12 +3,16 @@
 /**
  * Page model pour les pages "lieu"
  * Ajoute une méthode pour récupérer le layout avec les fichiers résolus
+ * et les images au format responsive (srcset WebP + fallback).
  */
 class LieuPage extends Page
 {
     /**
-     * Retourne le layout avec les URLs des fichiers résolues
-     * Utilisable dans KQL: page.layoutWithResolvedFiles
+     * Retourne le layout avec les images résolues au format responsive.
+     * Chaque image passe par $file->historiaImage('column') pour obtenir
+     * fallback + WebP + AVIF srcset au lieu de l'URL brute du fichier original.
+     *
+     * Utilisable dans KQL : page.layoutWithResolvedFiles
      * 
      * @kql-allowed
      */
@@ -56,26 +60,25 @@ class LieuPage extends Page
                         case 'image':
                             $image = $block->image()->toFile();
                             $blockData['content'] = [
-                                'image' => $image ? [
-                                    'url' => $image->url(),
-                                    'alt' => $block->alt()->value() ?: $image->alt()->value(),
-                                    'width' => $image->width(),
-                                    'height' => $image->height()
-                                ] : null,
+                                // Image responsive : fallback + WebP + AVIF srcset
+                                // au lieu de l'URL brute (fichiers originaux souvent 5–12 Mo)
+                                'image' => $image
+                                    ? $image->historiaImage('column')
+                                    : null,
                                 'caption' => $block->caption()->value(),
                                 'alt' => $block->alt()->value()
                             ];
+                            // Surcharger le alt si renseigné au niveau du bloc
+                            if ($blockData['content']['image'] && $block->alt()->isNotEmpty()) {
+                                $blockData['content']['image']['alt'] = $block->alt()->value();
+                            }
                             break;
 
                         case 'gallery':
                             $images = [];
                             foreach ($block->images()->toFiles() as $img) {
-                                $images[] = [
-                                    'url' => $img->url(),
-                                    'alt' => $img->alt()->value(),
-                                    'width' => $img->width(),
-                                    'height' => $img->height()
-                                ];
+                                // Chaque image de galerie au format responsive
+                                $images[] = $img->historiaImage('column');
                             }
                             $blockData['content'] = [
                                 'images' => $images,
