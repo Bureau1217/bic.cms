@@ -16,8 +16,11 @@ return [
       'allowed' => [
         'kirby\cms\file::historiaimage',
         'kirby\cms\page::responsiveimage',
+        'kirby\cms\page::templateimage',
+        'kirby\cms\structureobject::safeimage',
         // Page models custom (sans namespace → nom de classe brut)
         'lieupage::responsiveimage',
+        'lieupage::templateimage',
       ]
     ]
   ],
