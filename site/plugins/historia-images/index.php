@@ -167,5 +167,25 @@ Kirby::plugin('historia/images', [
             $file = $this->content()->get($field)->toFile();
             return $file ? $file->historiaImage($preset) : null;
         },
+
+        // Retourne l'image responsive de la première image avec un template donné.
+        // Null-safe : retourne null si aucune image trouvée.
+        // Usage KQL : page.templateImage("poster", "podcast")
+        'templateImage' => /** @kql-allowed */ function (string $template, string $preset = 'column'): ?array {
+            $file = $this->images()->template($template)->first();
+            return $file ? $file->historiaImage($preset) : null;
+        },
+    ],
+
+    // ─── Méthode sur les StructureObject : wrapper null-safe pour KQL ─────────
+    'structureObjectMethods' => [
+
+        // Retourne l'image responsive d'un champ fichier du structureItem.
+        // Null-safe : retourne null si le fichier n'existe pas.
+        // Usage KQL : structureItem.safeImage("image", "column")
+        'safeImage' => /** @kql-allowed */ function (string $field, string $preset = 'column'): ?array {
+            $file = $this->content()->get($field)->toFile();
+            return $file ? $file->historiaImage($preset) : null;
+        },
     ],
 ]);
