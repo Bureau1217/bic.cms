@@ -26,6 +26,32 @@ tabs:
         width: 1/3
         fieldsets:
           - text
+      blocs_separator:
+        type: line
+      bloc1_titre:
+        label: Bloc 1 - Titre
+        type: blocks
+        width: 1/3
+        fieldsets:
+          - heading
+      bloc1_texte:
+        label: Bloc 1 - Texte
+        type: blocks
+        width: 2/3
+        fieldsets:
+          - text
+      bloc2_titre:
+        label: Bloc 2 - Titre
+        type: blocks
+        width: 1/3
+        fieldsets:
+          - heading
+      bloc2_texte:
+        label: Bloc 2 - Texte
+        type: blocks
+        width: 2/3
+        fieldsets:
+          - text
       partenaires:
         label: Partenaires
         type: structure
