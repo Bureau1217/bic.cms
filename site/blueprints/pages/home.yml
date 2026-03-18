@@ -60,4 +60,42 @@ tabs:
                 uploads:
                   template: image
 
+  secondaire:
+    icon: settings
+    label: Secondaire
+    type: fields
+    fields:
+      loader_message:
+        label: Message du loader
+        type: text
+        placeholder: Chargement de l'experience immersive...
+        help: Message affiche sous le logo dans le loader de la page d'accueil.
+      secondary_separator:
+        type: line
+      address:
+        label: Adresse
+        type: writer
+        inline: true
+      email:
+        label: Email
+        type: email
+      phone:
+        label: Téléphone
+        type: tel
+      site_url:
+        label: URL du site
+        type: url
+      instagram:
+        label: URL Instagram
+        type: url
+      logos:
+        label: Logos partenaires
+        type: files
+        layout: cards
+        accept:
+          - image/*
+        image:
+          ratio: 1/1
+          cover: false
+
   seo: seo/page
