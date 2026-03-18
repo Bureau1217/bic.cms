@@ -79,28 +79,4 @@ tabs:
             label: Lien
             type: url
 
-  contact:
-    icon: map
-    label: Contact
-    fields:
-      address:
-        label: Adresse
-        type: writer
-        inline: true
-      email:
-        label: Email
-        type: email
-      phone:
-        label: Téléphone
-        type: tel
-      logos:
-        label: Logos partenaires
-        type: files
-        layout: cards
-        accept:
-          - image/*
-        image:
-          ratio: 1/1
-          cover: false
-
   seo: seo/page 
