@@ -32,6 +32,26 @@ tabs:
             label: Épisodes
             extends: sections/episodes
             size: small
+          edito:
+            type: fields
+            fields:
+              edito:
+                label: Edito
+                type: structure
+                columns:
+                  nom: true
+                  titre: true
+                  description: true
+                fields:
+                  nom:
+                    label: Nom
+                    type: text
+                  titre:
+                    label: Titre
+                    type: text
+                  description:
+                    label: Description
+                    type: textarea
       media:
         width: 1/3
         sections:
@@ -70,32 +90,5 @@ tabs:
         type: text
         placeholder: Chargement de l'experience immersive...
         help: Message affiche sous le logo dans le loader de la page d'accueil.
-      secondary_separator:
-        type: line
-      address:
-        label: Adresse
-        type: writer
-        inline: true
-      email:
-        label: Email
-        type: email
-      phone:
-        label: Téléphone
-        type: tel
-      site_url:
-        label: URL du site
-        type: url
-      instagram:
-        label: URL Instagram
-        type: url
-      logos:
-        label: Logos partenaires
-        type: files
-        layout: cards
-        accept:
-          - image/*
-        image:
-          ratio: 1/1
-          cover: false
 
   seo: seo/page

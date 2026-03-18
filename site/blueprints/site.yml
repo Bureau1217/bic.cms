@@ -1,33 +1,72 @@
-columns:
-  - width: 1/2
-    sections:
-      home:
-        type: pages
-        label: Accueil
-        layout: cards
-        size: huge
-        templates:
-          - home
-        image:
-          ratio: 16/9
-          cover: true
+tabs:
+  pages:
+    label: Pages
+    icon: text
+    columns:
+      - width: 1/2
+        sections:
+          home:
+            type: pages
+            label: Accueil
+            layout: cards
+            size: huge
+            templates:
+              - home
+            image:
+              ratio: 16/9
+              cover: true
 
-  - width: 1/2
-    sections:
-      pages:
-        type: pages
-        label: Pages
-        create: default
-        templates:
-          - apropos
-          - default
-          - parcours
-          - references
-          - mentions-legales
-          - protection-des-donnees
-          - engagement
+      - width: 1/2
+        sections:
+          pages:
+            type: pages
+            label: Pages
+            create: default
+            templates:
+              - apropos
+              - default
+              - parcours
+              - references
+              - mentions-legales
+              - protection-des-donnees
+              - engagement
 
-  - width: 1/1
-    sections:
-      lieux:
-        extends: sections/lieux
+      - width: 1/1
+        sections:
+          lieux:
+            extends: sections/lieux
+
+  footer:
+    label: Footer
+    icon: settings
+    columns:
+      - width: 1/1
+        sections:
+          footer_fields:
+            type: fields
+            fields:
+              address:
+                label: Adresse
+                type: writer
+                inline: true
+              email:
+                label: Email
+                type: email
+              phone:
+                label: Téléphone
+                type: tel
+              site_url:
+                label: URL du site
+                type: url
+              instagram:
+                label: URL Instagram
+                type: url
+              logos:
+                label: Logos partenaires
+                type: files
+                layout: cards
+                accept:
+                  - image/*
+                image:
+                  ratio: 1/1
+                  cover: false
