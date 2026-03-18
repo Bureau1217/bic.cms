@@ -93,6 +93,12 @@ tabs:
       phone:
         label: Téléphone
         type: tel
+      site_url:
+        label: URL du site
+        type: url
+      instagram:
+        label: Instagram
+        type: url
       logos:
         label: Logos partenaires
         type: files
