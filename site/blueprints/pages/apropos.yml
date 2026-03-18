@@ -57,21 +57,12 @@ tabs:
         type: structure
         columns:
           nom: true
-          image: true
           paragraphe: true
           lien: true
         fields:
-          image:
-            label: Image
-            type: files
-            max: 1
-            accept:
-              - image/*
-            width: 1/2
           nom:
             label: Nom
             type: text
-            width: 1/2
           paragraphe:
             label: Paragraphe
             type: textarea
@@ -87,6 +78,9 @@ tabs:
         label: Adresse
         type: writer
         inline: true
+      website:
+        label: Site internet
+        type: url
       email:
         label: Email
         type: email
