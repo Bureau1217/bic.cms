@@ -106,11 +106,84 @@ tabs:
             type: textarea
             size: medium
           journal_bouton_texte:
-            label: Texte du bouton
+            label: Texte du bouton 1 (PDF)
             type: text
             width: 1/2
-          journal_bouton_url:
-            label: URL du bouton
+          journal_bouton_fichier:
+            label: Fichier PDF du bouton 1
+            type: files
+            width: 1/2
+            max: 1
+          journal_bouton2_texte:
+            label: Texte du bouton 2 (Lien)
+            type: text
+            width: 1/2
+          journal_bouton2_url:
+            label: URL du bouton 2
+            type: url
+            width: 1/2
+
+  cartepostale:
+    icon: image
+    label: Carte postale
+    sections:
+      cartepostale:
+        type: fields
+        fields:
+          cartepostale_titre:
+            label: Titre
+            type: text
+          cartepostale_texte:
+            label: Paragraphe
+            type: textarea
+            size: medium
+          cartepostale_bouton_texte:
+            label: Texte du bouton 1 (PDF)
+            type: text
+            width: 1/2
+          cartepostale_bouton_fichier:
+            label: Fichier PDF du bouton 1
+            type: files
+            width: 1/2
+            max: 1
+          cartepostale_bouton2_texte:
+            label: Texte du bouton 2 (Lien)
+            type: text
+            width: 1/2
+          cartepostale_bouton2_url:
+            label: URL du bouton 2
+            type: url
+            width: 1/2
+
+  affiches:
+    icon: image
+    label: Affiches
+    sections:
+      affiches:
+        type: fields
+        fields:
+          affiches_titre:
+            label: Titre
+            type: text
+          affiches_texte:
+            label: Paragraphe
+            type: textarea
+            size: medium
+          affiches_bouton_texte:
+            label: Texte du bouton 1 (PDF)
+            type: text
+            width: 1/2
+          affiches_bouton_fichier:
+            label: Fichier PDF du bouton 1
+            type: files
+            width: 1/2
+            max: 1
+          affiches_bouton2_texte:
+            label: Texte du bouton 2 (Lien)
+            type: text
+            width: 1/2
+          affiches_bouton2_url:
+            label: URL du bouton 2
             type: url
             width: 1/2
 
