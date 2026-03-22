@@ -26,16 +26,6 @@ tabs:
             width: 1/3
             fieldsets:
               - text
-          remerciement_separator:
-            type: line
-          remerciement_title:
-            label: Titre remerciement
-            type: text
-            width: 1/1
-          remerciement_text:
-            label: Texte remerciement
-            type: textarea
-            width: 1/1
           #cover:
           #  label: Cover
           #  type: files
