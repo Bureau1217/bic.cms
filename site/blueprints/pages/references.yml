@@ -91,6 +91,9 @@ tabs:
               lieu:
                 label: Lieu
                 type: text
+              lien:
+                label: Lien
+                type: url
   journal:
     icon: book
     label: Notre journal
