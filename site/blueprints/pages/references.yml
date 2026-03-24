@@ -190,4 +190,23 @@ tabs:
             type: url
             width: 1/2
 
+  azulejos:
+    icon: video
+    label: Atelier Azulejos
+    sections:
+      azulejos:
+        type: fields
+        fields:
+          azulejos_titre:
+            label: Titre
+            type: text
+          azulejos_texte:
+            label: Paragraphe
+            type: textarea
+            size: medium
+          azulejos_video:
+            label: URL de la vidéo (YouTube, Vimeo, etc.)
+            type: url
+            help: Collez l'URL de la vidéo YouTube ou Vimeo
+
   seo: seo/page
