@@ -1,0 +1,14 @@
+name: field.blocks.text.name
+icon: text
+wysiwyg: true
+preview: text
+fields:
+  text:
+    type: writer
+    nodes: false
+    placeholder: field.blocks.text.placeholder
+  anchor:
+    label: Ancre
+    type: text
+    placeholder: "portrait"
+    help: "ID pour les liens d'ancrage (sans le #)"

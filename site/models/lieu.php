@@ -47,13 +47,15 @@ class LieuPage extends Page
                         case 'heading':
                             $blockData['content'] = [
                                 'level' => $block->level()->value(),
-                                'text' => $block->text()->value()
+                                'text' => $block->text()->value(),
+                                'anchor' => $block->anchor()->value() ?? null
                             ];
                             break;
 
                         case 'text':
                             $blockData['content'] = [
-                                'text' => $block->text()->toBlocks()->toHtml()
+                                'text' => $block->text()->toBlocks()->toHtml(),
+                                'anchor' => $block->anchor()->value() ?? null
                             ];
                             break;
 
