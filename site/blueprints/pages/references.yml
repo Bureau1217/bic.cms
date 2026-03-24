@@ -205,8 +205,10 @@ tabs:
             type: textarea
             size: medium
           azulejos_video:
-            label: URL de la vidéo (YouTube, Vimeo, etc.)
-            type: url
-            help: Collez l'URL de la vidéo YouTube ou Vimeo
+            label: Vidéo
+            type: files
+            max: 1
+            accept:
+              - video/*
 
   seo: seo/page
