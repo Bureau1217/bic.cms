@@ -2,42 +2,41 @@ title: Parcours
 
 icon: 📍
 
-sections:
+tabs:
   content:
-    type: fields
-    fields:
-      titre:
-        label: Titre
-        type: blocks
-        width: 1/3
-        fieldsets:
-          - heading
-      soustitre:
-        label: Sous-titre
-        type: blocks
-        width: 1/3
-        fieldsets:
-          - text
-      #cover:
-        #  label: Cover
-        #  type: files
-        #  width: 1/3
-        #  max: 1
-        #  uploads:
-        #    template: image
-  lieux:
-    type: pages
-    template: lieu
-    empty: Aucun lieu pour le moment
-    status: all
-    sortable: true
-    layout: cards
-    size: small
-    image:
-      query: page.picto.toFile
-      cover: false
-      ratio: 1/1
-      back: "#FE0002"
-  episodes:
-    extends: sections/episodes
-    label: Épisodes
+    icon: text
+    label: Contenu
+    sections:
+      content:
+        type: fields
+        fields:
+          titre:
+            label: Titre
+            type: blocks
+            width: 1/3
+            fieldsets:
+              - heading
+          soustitre:
+            label: Sous-titre
+            type: blocks
+            width: 1/3
+            fieldsets:
+              - text
+      lieux:
+        type: pages
+        template: lieu
+        empty: Aucun lieu pour le moment
+        status: all
+        sortable: true
+        layout: cards
+        size: small
+        image:
+          query: page.picto.toFile
+          cover: false
+          ratio: 1/1
+          back: "#FE0002"
+      episodes:
+        extends: sections/episodes
+        label: Épisodes
+
+  seo: seo/page

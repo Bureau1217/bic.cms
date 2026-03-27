@@ -72,7 +72,7 @@ columns:
             label: Portrait
             type: structure
             columns:
-              nom: true 
+              nom: true
             fields:
               image:
                 label: Image
