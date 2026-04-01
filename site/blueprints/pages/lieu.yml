@@ -42,8 +42,10 @@ columns:
               - image/png
           adresse:
             label: Adresse
-            type: text
+            type: writer
             placeholder: "123 Rue de la Paix, 1205 Genève"
+            marks:
+              - italic
           gps:
             label: Coordonnées GPS
             type: text
