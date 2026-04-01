@@ -28,6 +28,20 @@ tabs:
           - text
       blocs_separator:
         type: line
+      bloc0_titre:
+        label: Bloc 0 - Titre
+        type: blocks
+        width: 1/3
+        fieldsets:
+          - heading
+      bloc0_texte:
+        label: Bloc 0 - Texte
+        type: blocks
+        width: 2/3
+        fieldsets:
+          - text
+      bloc1_separator:
+        type: line
       bloc1_titre:
         label: Bloc 1 - Titre
         type: blocks
