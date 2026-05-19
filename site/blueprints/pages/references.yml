@@ -94,6 +94,15 @@ tabs:
               lien:
                 label: Lien
                 type: url
+              fichier:
+                label: Fichier PDF
+                type: files
+                max: 1
+                width: 1/2
+              fichiertexte:
+                label: Texte du lien de téléchargement
+                type: text
+                width: 1/2
   journal:
     icon: book
     label: Notre journal
